@@ -1,0 +1,11 @@
+[Unit]
+Description=concubot
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/root/concubot/
+Environment="PYTHONPATH=/root/concubot/"
+ExecStart=/usr/bin/python3 /root/concubot/src/main.py
+[Install]
+WantedBy=multi-user.target
